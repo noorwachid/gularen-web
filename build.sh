@@ -2,7 +2,7 @@ C_INCLUDE_PATH=""
 CPLUS_INCLUDE_PATH=""
 
 em++ --bind \
-	-std=c++11 \
+	-std=c++17 \
 	-I source \
 	-I dependency/gularen/source \
 	-O2 \

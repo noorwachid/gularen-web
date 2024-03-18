@@ -1,0 +1,7 @@
+-std=c++17
+-stdlib=libc++
+-xc++
+-Isource
+-Idependency/gularen/source
+-I/usr/local/include
+
