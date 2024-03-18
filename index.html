@@ -184,8 +184,13 @@
 
 		window.gularen = {}
 		gularen.transpiled = false;
+		gularen.ready = false;
 
 		function transpile() {
+			if (!gularen.ready) {
+				return;
+			}
+
 			const html = Module.transpile(inputNode.value);
 			outputNode.innerHTML = html;
 			dispatchEvent(new Event('gularentranspile', {
@@ -197,6 +202,7 @@
 		}
 
 		Module.onRuntimeInitialized = () => {
+			gularen.ready = true;
 			transpile();
 		};
 
@@ -306,14 +312,6 @@
 		}
 
 		inputNode.addEventListener('input', transpile);
-		inputNode.addEventListener('click', function(e) {
-			followCursor();
-		});
-		inputNode.addEventListener('keyup', function (e) {
-			if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
-				followCursor();
-			}
-		});
 
 		inputNode.addEventListener('keydown', function (e) {
 			if (e.key === 'Tab') {
@@ -335,7 +333,7 @@
 			document.querySelectorAll('code').forEach(el => {
 				for (let i = 0; i < el.classList.length; i += 1) {
 					const className = el.classList[i];
-					if (className == 'language-latex' || className == 'language-mermaid') {
+					if (className == 'language-math' || className == 'language-mermaid') {
 						return; // dont highlight this two
 					}
 				}
