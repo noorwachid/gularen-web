@@ -14,8 +14,8 @@ Hello *darkness* _my old_ friend.
 Very =important sentence=.
 
 >> Quote
-/ "Hold the flashlight steady!"
-/ ---my Dad
+	"Hold the flashlight steady!"
+	---my Dad
 
 >> Paragraph
 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -28,10 +28,6 @@ Aenean non libero non nisi hendrerit pretium.
 Nulla euismod neque magna.
 Aliquam congue velit ut felis suscipit fermentum.
 Nulla aliquet eget sapien ac ultrices.
-
->> Indentation
-	I believe I can fly!
-		Look mom no hand!
 
 >> Emoji
 :coffee:, :rainy:, :small-smile:
