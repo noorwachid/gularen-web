@@ -4,14 +4,11 @@
 >> Comment
 Now you see me, ~ now you dont.
 
-~~ title: Gularen 101
-~~ author: Noor Wachid
-
->> Style
+>> Emphasis
 Hello *darkness* /my old/ _friend_.
 
 >> Highlights
-Very =important sentence=.
+Very ==important sentence==.
 
 >> Quote
 	"Hold the flashlight steady!"
@@ -101,26 +98,26 @@ F(\omega) = \int_{-\infty}^{\infty} f(t) \, e^{-i\omega t} \, dt
 ---
 
 >> Admonition
-<Tip> A tip
-<Note> A note
-<Hint> A hint
-<See also> An interesting suggestion
-<Important> Important stuff
-<Warning> Warning stuff
-<Other> Other stuff
+//Tip// A tip
+//Note// A note
+//Hint// A hint
+//See also// An interesting suggestion
+//Important// Important stuff
+//Warning// Warning stuff
+//Other// Other stuff
 
 >> Date-Time
-Meet me on <2020-10-10 18:00> at Diner
+Meet me on +2020-10-10 18:00 at Diner
 
 >> Citation
 
 > In-text
-On his book ^[think-fs] he made remarkable remark. 
+On his book &[Think FS] he made remarkable remark. 
 
 > Reference
-^[think-fs]:
-	title: Thinking Fast Slugish
-	author: James Doe
-	year: 2010
-	publisher: Zebra
+~~ & Think FS
+~~ title     = Thinking Fast Slugish
+~~ author    = James Doe
+~~ year      = 2010
+~~ publisher = Zebra
 
