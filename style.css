@@ -433,3 +433,15 @@ article {
 	padding: 10px 10px;
 	margin: 0 auto;
 }
+
+ins {
+	text-decoration: none;
+	background-color: #003300;
+	color: #55FF55;
+}
+
+del {
+	text-decoration: none;
+	background-color: #660000;
+	color: #FFAAAA;
+}
