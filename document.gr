@@ -10,6 +10,9 @@ Hello *darkness* /my old/ _friend_.
 >> Highlights
 Very ==important sentence==.
 
+>> Changes
+=-This text is removed-=. =+This text is added+=
+
 >> Quote
 	"Hold the flashlight steady!"
 	---my Dad
@@ -46,10 +49,8 @@ Nulla aliquet eget sapien ac ultrices.
 [x] Done
 
 >> Definition List
-Elephant ::
-	Large animal
-Bee ::
-	Animal, smaller than an elephant
+Elephant = Large animal
+Bee      = Animal, smaller than an elephant
 
 >> Table
 | Name | Chromosome | Age |
@@ -98,13 +99,13 @@ F(\omega) = \int_{-\infty}^{\infty} f(t) \, e^{-i\omega t} \, dt
 ---
 
 >> Admonition
-//Tip// A tip
-//Note// A note
-//Hint// A hint
-//See also// An interesting suggestion
-//Important// Important stuff
-//Warning// Warning stuff
-//Other// Other stuff
++ Tip: A tip
++ Note: A note
++ Hint: A hint
++ See also: An interesting suggestion
++ Important: Important stuff
++ Warning: Warning stuff
++ Other: Other stuff
 
 >> Date-Time
 Meet me on +2020-10-10 18:00 at Diner
@@ -115,9 +116,9 @@ Meet me on +2020-10-10 18:00 at Diner
 On his book &[Think FS] he made remarkable remark. 
 
 > Reference
-~~ & Think FS
-~~ title     = Thinking Fast Slugish
-~~ author    = James Doe
-~~ year      = 2010
-~~ publisher = Zebra
+& Think FS
+	title     = Thinking Fast Slugish
+	author    = James Doe
+	year      = 2010
+	publisher = Zebra
 
