@@ -1,3 +1,4 @@
+#include <Gularen/Frontend/Parser.hpp>
 #include <Gularen/Backend/Html/Composer.hpp>
 #include <emscripten/bind.h>
 #include <string>
