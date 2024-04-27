@@ -1,5 +1,4 @@
->>> Gularen
-> A sweet-spot of markup language 
+>>> Gularen 101
 
 >> Comment
 Now you see me, ~ now you dont.
@@ -8,10 +7,9 @@ Now you see me, ~ now you dont.
 Hello *darkness* /my old/ _friend_.
 
 >> Highlights
-Very (=important sentence=).
-
->> Changes
-(-This text is removed-). (+This text is added+)
+(=Very important sentence=).
+(-This text is removed-). 
+(+This text is added+)
 
 >> Quote
 	"Hold the flashlight steady!"
@@ -33,7 +31,6 @@ Nulla aliquet eget sapien ac ultrices.
 :coffee:, :rainy:, :small-smile:
 
 >> List
-
 > Bullet List
 - One
 - Two
@@ -59,7 +56,6 @@ Bee      = Animal, smaller than an elephant
 | Dori |     XX     |  19 |
 
 >> Resource
-
 > Link
 A link [https://github.com/noorwachid].
 A labeled link [https://github.com/noorwachid](here).
@@ -68,7 +64,6 @@ A labeled link [https://github.com/noorwachid](here).
 ![https://i.imgflip.com/7r6vdk.jpg]
 
 >> Code
-
 > Syntax Highlighting
 Say `console.log('my name')`!
 
@@ -111,7 +106,6 @@ F(\omega) = \int_{-\infty}^{\infty} f(t) \, e^{-i\omega t} \, dt
 Meet me on +2020-10-10 18:00 at Diner
 
 >> Citation
-
 > In-text
 On his book &[Think FS] he made remarkable remark. 
 
