@@ -8,10 +8,10 @@ Now you see me, ~ now you dont.
 Hello *darkness* /my old/ _friend_.
 
 >> Highlights
-Very ==important sentence==.
+Very (=important sentence=).
 
 >> Changes
-=-This text is removed-=. =+This text is added+=
+(-This text is removed-). (+This text is added+)
 
 >> Quote
 	"Hold the flashlight steady!"
