@@ -1,15 +1,10 @@
 >>> Gularen 101
 
 >> Comment
-Now you see me, ~ now you dont.
+Now you see me, # now you dont.
 
 >> Emphasis
-Hello *darkness* /my old/ _friend_.
-
->> Highlights
-(=Very important sentence=).
-(-This text is removed-). 
-(+This text is added+)
+Hello *darkness* my old _friend_.
 
 >> Quote
 	"Hold the flashlight steady!"
@@ -28,7 +23,7 @@ Aliquam congue velit ut felis suscipit fermentum.
 Nulla aliquet eget sapien ac ultrices.
 
 >> Emoji
-:coffee:, :rainy:, :small-smile:
+:coffee:, :rainy:, :relaxed:
 
 >> List
 > Bullet List
@@ -41,13 +36,9 @@ Nulla aliquet eget sapien ac ultrices.
 2. Two
 3. Three
 
->> Check List
+> Check List
 [ ] Todo
 [x] Done
-
->> Definition List
-Elephant = Large animal
-Bee      = Animal, smaller than an elephant
 
 >> Table
 | Name | Chromosome | Age |
@@ -67,52 +58,50 @@ A labeled link [https://github.com/noorwachid](here).
 > Syntax Highlighting
 Say `console.log('my name')`!
 
---- js
+``` js
 function loadWebAssemblyFromURL(url) {
   return fetch(url)
     .then(response => response.arrayBuffer())
     .then(buffer => WebAssembly.instantiate(buffer))
     .then(module => module.instance);
 }
----
+```
 
 > UML Diagram
---- mermaid
+``` !mermaid
 flowchart LR
     A[Hungry] --> B{Eat}
     B -- Yes --> C[Stuffed]
     B -- No --> D[Starving]
     C --> E[Dead]
     D --> E
----
+```
 
 > Math Notation
-Muh `math``x` is pretty.
+Muh `!latex``x` is pretty.
 
---- math
+``` !latex
 F(\omega) = \int_{-\infty}^{\infty} f(t) \, e^{-i\omega t} \, dt
----
+```
 
 >> Admonition
-(!) Tip: A tip
-(!) Note: A note
-(!) Hint: A hint
-(!) See also: An interesting suggestion
-(!) Important: Important stuff
-(!) Warning: Warning stuff
-(!) Other: Other stuff
-
->> Date-Time
-Meet me on +2020-10-10 18:00 at Diner
+TIP! A tip
+NOTE! A note
+HINT! A hint
+SEE! An interesting suggestion
+IMPORTANT! Important stuff
+WARNING! Warning stuff
 
 >> Citation
 > In-text
-On his book &[Think FS] he made remarkable remark. 
+On his book ^[Think FS] he made remarkable remark. 
 
 > Reference
-(&) Think FS
-	title     = Thinking Fast Slugish
-	author    = James Doe
-	year      = 2010
-	publisher = Zebra
+% bibliography {
+	id: "Think FS"
+	title: "Thinking Fast Slugish"
+	author: "James Doe"
+	year: "2010"
+	publisher: "Zebra"
+}
 

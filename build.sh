@@ -9,5 +9,7 @@ em++ --bind \
 	-s NO_FILESYSTEM=1 \
 	-s ALLOW_MEMORY_GROWTH=1 \
 	-o library/markup/gularen.js \
-	source/binding.cpp
+	source/binding.cpp \
+	dependency/gularen/source/*.cpp \
+	dependency/gularen/source/Collection/*.cpp
 

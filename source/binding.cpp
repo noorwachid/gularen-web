@@ -1,15 +1,16 @@
-#include <Gularen/Frontend/Parser.hpp>
-#include <Gularen/Backend/Html/Composer.hpp>
+#include <Parser.hpp>
+#include <HTMLGen.hpp>
 #include <emscripten/bind.h>
 #include <string>
 
 std::string transpile(const std::string& input) {
-	Gularen::Parser parser;
-
-	Gularen::Html::Composer composer;
-	std::string_view output = composer.compose(parser.parse(input));
-
-	return std::string(output.data(), output.size());
+	String inputStr = input.c_str();
+	Node* node = parse(inputStr);
+	if (node == nullptr) {
+		return "";
+	}
+	String outputStr = genHTML(node);
+	return std::string(reinterpret_cast<char const*>(outputStr.items()), outputStr.size());
 }
 
 EMSCRIPTEN_BINDINGS(gularen) {

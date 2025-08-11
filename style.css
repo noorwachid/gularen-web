@@ -364,11 +364,11 @@ img {
 	border-left-color: #cfaf22;
 }
 
-.admonition.see-also>.label {
+.admonition.see>.label {
 	color: #ff3980;
 }
 
-.admonition.see-also {
+.admonition.see {
 	border-left-color: #ef2990;
 }
 
@@ -402,7 +402,7 @@ ul.check-list ul.check-list {
 	padding-left: 3.2rem;
 }
 
-ul.todo>li>input[type=checkbox] {
+ul.check-list>li>input[type=checkbox] {
 	margin-bottom: 0;
 	margin-right: 4px;
 }

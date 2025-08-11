@@ -298,7 +298,7 @@
 				.replaceAll('.', '=')
 			);
 		} else {
-			fetch('document.gr')
+			fetch('document.gularen')
 				.then((response) => {
 					return response.text();
 				})
@@ -333,7 +333,7 @@
 			document.querySelectorAll('code').forEach(el => {
 				for (let i = 0; i < el.classList.length; i += 1) {
 					const className = el.classList[i];
-					if (className == 'language-math' || className == 'language-mermaid') {
+					if (className == 'view') {
 						return; // dont highlight this two
 					}
 				}
@@ -352,7 +352,7 @@
 			theme: 'dark',
 		});
 		function parseMermaid() {
-			mermaid.init(undefined, '.language-mermaid');
+			mermaid.init(undefined, '.view.language-mermaid');
 		}
 		addEventListener('gularentranspile', parseMermaid)
 		if (gularen.transpiled) {
@@ -363,7 +363,7 @@
 	<script src="library/math/script.js"></script>
 	<script>
 		function parseKatex() {
-			document.querySelectorAll('.language-math').forEach(node => {
+			document.querySelectorAll('.view.language-latex').forEach(node => {
 				katex.render(node.innerHTML, node);
 			})
 		}
