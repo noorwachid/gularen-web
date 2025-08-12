@@ -314,15 +314,60 @@
 		inputNode.addEventListener('input', transpile);
 
 		inputNode.addEventListener('keydown', function (e) {
+			let el = e.target;
+
+			function queryLineIndex() {
+				let lineIndex = 0;
+				for (let i = el.selectionEnd - 1; i >= 0; i--) {
+					if (i === 0) {
+						lineIndex = 0;
+						break;
+					}
+					if (el.value[i] === '\n') {
+						lineIndex = i + 1;
+						break;
+					}
+				}
+				return lineIndex;
+			}
+
 			if (e.key === 'Tab') {
 				e.preventDefault();
-				var start = this.selectionStart;
-				var end = this.selectionEnd;
+				var start = el.selectionStart;
+				var end = el.selectionEnd;
 
-				this.value = this.value.substring(0, start) + "\t" + this.value.substring(end);
-
-				this.selectionStart = this.selectionEnd = start + 1;
-				transpile();
+				el.value = el.value.substring(0, start) + "\t" + el.value.substring(end);
+				el.selectionStart = start + 1;
+				el.selectionEnd = start + 1;
+			}
+			if (e.key === ' ') {
+				let lineIndex = queryLineIndex();
+				if (el.value[lineIndex] === ' ' || el.value[lineIndex] === '\t') {
+					let end = el.selectionEnd;
+					if (end - 3 >= 0 &&
+						el.value[end - 3] == ' ' &&
+						el.value[end - 2] == ' ' &&
+						el.value[end - 1] == ' ') {
+						e.preventDefault();
+						el.value = e.target.value.substring(0, end - 3) + "\t" + el.value.substring(end);
+						el.selectionStart = end + 1;
+						el.selectionEnd = end + 1;
+					}
+				}
+			}
+			if (e.key === 'Enter') {
+				let lineIndex = queryLineIndex();
+				if (el.value[lineIndex] === '\t') {
+					e.preventDefault();
+					let tabs = '';
+					for (let i = 0; i < el.value.length && el.value[lineIndex + i] == '\t'; i++) {
+						tabs += '\t';
+					}
+					let end = el.selectionEnd;
+					el.value = el.value.substring(0, end) + '\n' + tabs + el.value.substring(end);
+					el.selectionStart = end + 1 + tabs.length;
+					el.selectionEnd = end + 1 + tabs.length;
+				}
 			}
 		});
 	</script>
