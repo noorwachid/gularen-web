@@ -1,16 +1,15 @@
 #include <Parser.hpp>
-#include <HTMLGen.hpp>
+#include <HtmlGen.hpp>
 #include <emscripten/bind.h>
 #include <string>
 
 std::string transpile(const std::string& input) {
-	String inputStr = input.c_str();
-	Node* node = parse(inputStr);
+	Node* node = parse(input.c_str());
 	if (node == nullptr) {
 		return "";
 	}
-	String outputStr = genHTML(node);
-	return std::string(reinterpret_cast<char const*>(outputStr.items()), outputStr.size());
+	HtmlGen::Option option = {};
+	return HtmlGen::gen(node, option).items();
 }
 
 EMSCRIPTEN_BINDINGS(gularen) {

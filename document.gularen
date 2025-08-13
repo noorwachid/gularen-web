@@ -98,10 +98,10 @@ On his book ^[Think FS] he made remarkable remark.
 
 > Reference
 % bibliography {
-	id: "Think FS"
-	title: "Thinking Fast Slugish"
-	author: "James Doe"
-	year: "2010"
-	publisher: "Zebra"
+	id: Think FS
+	title: Thinking Fast Slugish
+	author: James Doe
+	year: 2010
+	publisher: Zebra
 }
 

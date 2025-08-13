@@ -1,6 +1,10 @@
 C_INCLUDE_PATH=""
 CPLUS_INCLUDE_PATH=""
 
+cd dependency/gularen
+git pull origin master
+cd ../..
+
 em++ --bind \
 	-std=c++17 \
 	-I source \

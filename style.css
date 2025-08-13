@@ -224,8 +224,13 @@ table,
 ul,
 blockquote,
 .admonition,
-.reference {
+.bibliography,
+.view {
 	margin-bottom: 1.2rem;
+}
+.view.latex {
+	margin-left: auto;
+	margin-right: auto;
 }
 
 blockquote blockquote {
@@ -290,9 +295,7 @@ h3 {
 	line-height: 1.1;
 }
 
-h1>small,
-h2>small,
-h3>small {
+h1>small {
 	display: block;
 	color: #aaa;
 	margin-bottom: 1.8rem;
@@ -304,16 +307,14 @@ h1>small {
 	line-height: 1.2;
 }
 
-h2>small {
-	font-size: 1.8rem;
-	font-weight: bold;
-	line-height: 1.15;
+h2>small,
+h3>small {
+	font-size: 100%;
 }
 
-h3>small {
-	font-size: 1.6rem;
-	font-weight: bold;
-	line-height: 1.1;
+h2>small::before,
+h3>small::before {
+	content: ": ";
 }
 
 img {
