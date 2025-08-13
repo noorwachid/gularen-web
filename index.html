@@ -409,7 +409,7 @@
 	<script>
 		function parseKatex() {
 			document.querySelectorAll('.view.language-latex').forEach(node => {
-				katex.render(node.innerHTML, node);
+				katex.render(node.textContent, node);
 			})
 		}
 		addEventListener('gularentranspile', parseKatex);
